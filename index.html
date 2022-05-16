@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <!-- <link href="https://fonts.googleapis.com/css?family=Metrophobic&display=swap" rel="stylesheet">
+  <link rel="icon" href="./Assets/images/favicon.png" type="image" sizes="16x16"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Poppins:wght@100;200;400&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>How's the weather?</title>
+</head>
+
+<nav class="navbar">
+  <h1 class="display-4">Weather Dashboard</h1>
+</nav>
+
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-md-3" id="citySearch">
+      <div class="card" id="locationOptions">
+        <div class="card-header">
+          <div class="form-group" method="POST" id="form-group" data-list="list">
+            <label for="inputdefault">Search by State, City <br>
+            or enter by zipcode... </label>
+            <form class="example">
+              <input type="text" placeholder="Search.." id="cityNameSearch">
+              <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <button  onclick="getLocation()" > Get Device Location</button>
+            <p id="deviceLoco"></p>
+            <button onclick="clearHistory()" id="clear-History"> Clear History</button>
+          </div>
+          <h5 class="popularSearches">Recent Searches:</h5>
+          <ul id="searchHistoryList"></ul>
+          &emsp;
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 activeWeather" id="currentLocation">
+      <div class="card-title"> Today's Weather Summary </div>
+      <div class="card text-center" id="currentWeather">
+        <div class="card-header2" id="currentDay"></div>
+        <div id="wrapper-bg" class="card bg-image shadow-1-strong" style="background-image:url('./GIFS/clear.gif')">
+        <h3 class="city" id="city">City: </h3>
+        <h5 class="mb-1" id="wrapper-description"></h5>
+        <img id="weatherIcon" class="weatherIcon"></img>
+        <h4 class="temp" id="temp">Temp: </h4>
+        <h4 class="humidity" id="humidity">Humidity: </h4>
+        <h4 class="windSpeed" id="windSpeed">Wind Speed: </h4>
+        <h4 class="uvIndex uvBtn" id="uvIndex">UV Index: </h4>
+      
+   
+    <!-- daily forecast -->
+      <hr class="d-sm-none">
+      <div class="row-2">
+        <div class="col-sm-12" id="fiveTwo">
+          <h5 class="fiveDayForecast">5 Day Forecast </h5>
+          <div class="card-deck">
+            <div class="card weather-section" id="fivedayCardsTwo"><img src="./day_image.svg" alt="" class="card-img-top time" />
+              <div class="card-body">
+                <h5 id="dayTwo" class="days"></h5>
+                <img id="weatherIconTwo" id="weatherIconTwo"></img>
+                <p class="temp" id="tempTwo">Temp: </p>
+                <p class="humid" id="humidTwo">Humidity: </p>
+               
+              </div>
+            </div>
+            <div class="card weather-section" id="fivedayCardsThree"><img src="./day_image.svg" alt="" class="card-img-top time" />
+              <div class="card-body">
+                <h5 id="dayThree" class="days"></h5>
+                <img id="weatherIconThree" id="weatherThree"></img>
+                <p class="temp" id="tempThree">Temp: </p>
+                <p class="humid" id="humidThree">Humidity: </p>
+              
+              </div>
+            </div>
+            <div class="card weather-section" id="fivedayCardsFour"><img src="./day_image.svg" alt="" class="card-img-top time" />
+              <div class="card-body">
+                <h5 id="dayFour" class="days"></h5>
+                <img id="weatherIconFour" id="weatherIconFour"></img>
+                <p class="temp" id="tempFour">Temp: </p>
+                <p class="humid" id="humidFour">Humidity: </p>
+                
+               
+              </div>
+            </div>
+            <div class="card weather-section" id="fivedayCardsFive"><img src="./day_image.svg" alt="" class="card-img-top time" />
+              <div class="card-body">
+                <h5 id="dayFive" class="days"></h5>
+                <img id="weatherIconFive" id="weatherIconFive"></img>
+                <p class="temp" id="tempFive">Temp: </p>
+                <p class="humid" id="humidFive">Humidity: </p>
+              </div>
+            </div>
+            <div class="card weather-section" id="fivedayCardsSix"><img src="./day_image.svg" alt="" class="card-img-top time" />
+              <div class="card-body">
+                <h5 id="daySix" class="days"></h5>
+                <img id="weatherIconSix" id="weatherIconSix"></img>
+                <p class="temp" id="tempSix">Temp: </p>
+                <p class="humid" id="humidSix">Humidity:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- <script src="./workin.js"></script> -->
+<script src="./script.js"></script>
+</body>
+
+</html>
