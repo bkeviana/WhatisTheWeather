@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+ 
+  background-position: center center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 600px;
+  font-family: 'Poppins', sans-serif;
+  background-position: top center !important;
+  background-size: cover;
+}
+
+/* The navigation bar */
+.navbar {
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0 auto;
+  height: 80px;
+	border-bottom: 1px transparent solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ background-color: #f5c6cb;
+  }
+
+.navbar-dark {
+  background-color: #4682B4 !important;
+  height: 85px;
+  color: white;
+}
+
+.display-4 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.col-md-8 {
+  height: 100%;
+  margin-top: 20px;
+  padding-top: 35px;
+  margin: 0 auto;
+}
+
+.card-deck {
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+#citySearch {
+  padding-top: 35px;
+  color: #00072d !important;
+  height: flex;
+  margin-left: 8px;
+}
+
+.col-sm-12 {
+  margin: 0 auto;
+  background-color:  #ffc2d1;
+  height: flex;
+  padding-bottom: 20px;
+}
+
+.list-group-item {
+  color: #00072d;
+}
+#deviceLoco {
+    margin-top:3% ;
+    border: 1px white solid;
+    border-radius: 5px;
+
+}
+.card {
+   background-color: #fff; 
+  color: white;
+  border: 1px solid #fb6f92;
+}
+.weather-section{
+    color: #000;
+}
+
+.weather-section:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+.days{
+    color: #000;
+}
+.btn {
+  background-color:	#E8E8E8; 
+  border: none;
+  color: black;
+  text-align: center;
+  cursor: pointer; /* Pointer/hand icon */
+  width: flex;
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn:focus, .btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color:  #f8d7da;
+  color: white;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  outline: none;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border: none;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  margin: 0px !important;
+  background:#fff;
+  border: none;
+  color: #000;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  color: #ffc2d1;
+  border: none;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.card-header2 {
+  background:#ffc2d1;
+  padding-top: 10px;
+  height: 45px;
+}
+
+.card-header3 {
+  padding-top: 10px;
+}
+
+h5 {
+color: white;
+text-align: center;
+font-size: 15px;
+}
+
+.fiveDayForecast {
+  padding-top: 15px;
+}
+
+.city {
+  padding-top: 20px;
+}
+
+.uvIndex {
+  padding-bottom: 20px;  
+}
+.uvBtn{
+  text-align: center;
+  left:50%;
+}
+button {
+ border: none;
+        background: #ffc2d1;
+        color: white;
+        margin: 1px;
+        
+}
+
+.button:focus, .button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+#weatherIcon {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.temp {
+margin: 0 auto;
+text-align: center;
+}
+
+.humid {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#weatherIconTwo {
+  width: 100%;
+  height: auto;
+}
+
+#weatherIconThree {
+  width: 100%;
+  height: auto;
+}
+
+#weatherIconFour {
+  width: 100%;
+  height: auto;
+}
+
+#weatherIconFive {
+  width: 100%;
+  height: auto;
+}
+
+#weatherIconSix {
+  width: 100%;
+  height: auto;
+}
+#locationOptions {
+    background-color: #f8d7da;
+    border: 2px dotted #fb6f92;
+  }
+
+  #currentWeather {
+	background: rgba( 255, 255, 255, 0.1 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 14px );
+	-webkit-backdrop-filter: blur( 14px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	color: #000;
+  }
+
+  .yellowBtn{
+    background-color: yellow;
+}
+
+.orangeBtn{
+    background-color:orange;
+}
+
+.violetBtn{
+    background-color: violet
+}
+
+#historLlist li:hover {
+    font-weight: bold;
+}
+
