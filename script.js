@@ -199,8 +199,7 @@ $(document).ready(function() {
 			  break;
 		  }
 	
-		  // Uv Index
-          //const uvi = Math.floor(resp.value);
+	
 
           $.ajax({
             url: indexQueryURL,
