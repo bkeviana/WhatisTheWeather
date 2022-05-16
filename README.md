@@ -7,6 +7,8 @@ Here's a simple weather dashboard that does the following.
   <li>  You can search by state, city and zipcode to get the current weather and 5 day forecast. </li>
   <li> Weather displays temperature, wind speed, uv index and humidity. </li>
 <h3> Website: </h3>
+  https://bkeviana.github.io/WhatisTheWeather/
+  
 <h2> Technologies Used: </h2>
 <ul>
   <li> JQuery </li>
